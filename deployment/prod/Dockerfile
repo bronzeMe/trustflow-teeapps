@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM secretflow/teeapps-gcc11-dev:0.1.0b0 as builder
-
+# FROM secretflow/teeapps-gcc11-dev:0.1.0b0 as builder
+FROM mebrz/teeapps-gcc11-dev:0.1.0b0 as builder
 
 WORKDIR /home/admin/dev
 
@@ -44,6 +44,6 @@ COPY --from=builder /home/teeapp/python-occlum /home/teeapp/python-occlum
 
 ENV PATH /home/teeapp/python-occlum/bin:$PATH
 
-RUN pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 WORKDIR /home/teeapp/occlum/occlum_instance

@@ -57,10 +57,9 @@ def teeapps_dependencies():
     maybe(
         git_repository,
         name = "yacl",
-        commit = "f933d7ff4caf0d9f7ea84cc3e9f51a9a6ee9eeca",
-        remote = "{}/yacl.git".format(SECRETFLOW_GIT),
+        commit = "ecca01221356e5a56e3b2b6ad05bb4c9e928fc4f",
+        remote = "{}/yacl.git".format("https://github.com/bronzeMe"),
     )
-
     maybe(
         new_git_repository,
         name = "sf_apis",
